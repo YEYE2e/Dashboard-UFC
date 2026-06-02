@@ -1,122 +1,72 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { Grid, Box, Paper, Typography } from '@mui/material';
+import HeaderUI from './Components/HeaderUI';
+import AlertUI from './Components/AlertUI';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
+    <Box className="ufc-dashboard-container">
+      <Grid container spacing={5} sx={{ justifyContent: "center", alignItems: "center" }}>
+        
+        {/* Encabezado */}
+        <Grid size={{ xs: 12, md: 12 }}>
+          <HeaderUI />
+        </Grid>
+
+        {/* Alertas */}
+        <Grid size={{ xs: 12, md: 12 }} container sx={{ justifyContent: "center", alignItems: "center" }}>
+          <AlertUI description="Alerta: Confirmado combate por el título mundial de peso Ligero en el próximo evento." />
+        </Grid>
+
+        {/* Selector */}
+        <Grid size={{ xs: 12, md: 3 }}>
+          <Box className="ufc-skeleton-box">
+            Elemento: Selector de Divisiones y Peleadores
+          </Box>
+        </Grid>
+
+        {/* Indicadores */}
+        <Grid size={{ xs: 12, md: 9 }}>
+          <Box className="ufc-skeleton-box">
+            Elemento: Indicadores de Rendimiento (Combates, KOs, Derribos, Golpes)
+          </Box>
+        </Grid>
+
+        {/* Gráfico */}
+        <Grid 
+          size={{ xs: 12, md: 6 }} 
+          sx={{ display: { xs: "none", md: "block" } }}
         >
-          Count is {count}
-        </button>
-      </section>
+          <Box className="ufc-skeleton-box">
+            Elemento: Gráfico de Distribución (Métodos de Victoria)
+          </Box>
+        </Grid>
 
-      <div className="ticks"></div>
+        {/* Tabla */}
+        <Grid 
+          size={{ xs: 12, md: 6 }} 
+          sx={{ display: { xs: "none", md: "block" } }}
+        >
+          <Box className="ufc-skeleton-box">
+            Elemento: Tabla de Historial de Combates Recientes
+          </Box>
+        </Grid>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+        {/* Información adicional */}
+        <Grid size={{ xs: 12, md: 12 }}>
+          <Paper className="ufc-info-paper" sx={{ boxShadow: 2 }}>
+            <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold', color: '#d32f2f' }}>
+              Elemento: Información Adicional
+            </Typography>
+            <Typography variant="body2" sx={{ color: '#ccc' }}>
+              Glosario estadístico y detalles sobre las métricas físicas y de desempeño de los peleadores de UFC.
+            </Typography>
+          </Paper>
+        </Grid>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      </Grid>
+    </Box>
+  );
 }
 
-export default App
+export default App;
