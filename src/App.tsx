@@ -15,20 +15,20 @@ function App() {
 
         {/* Alertas */}
         <Grid size={{ xs: 12, md: 12 }} container sx={{ justifyContent: "center", alignItems: "center" }}>
-          <AlertUI description="Alerta: Confirmado combate por el título mundial de peso Ligero en el próximo evento." />
+          <AlertUI description="Confirmado combate por el título mundial de peso Ligero en el próximo evento." />
         </Grid>
 
         {/* Selector */}
         <Grid size={{ xs: 12, md: 3 }}>
           <Box className="ufc-skeleton-box">
-            Elemento: Selector de Divisiones y Peleadores
+            Selector de Divisiones y Peleadores
           </Box>
         </Grid>
 
         {/* Indicadores */}
         <Grid size={{ xs: 12, md: 9 }}>
           <Box className="ufc-skeleton-box">
-            Elemento: Indicadores de Rendimiento (Combates, KOs, Derribos, Golpes)
+            Indicadores de Rendimiento (Combates, KOs, Derribos, Golpes)
           </Box>
         </Grid>
 
@@ -38,7 +38,7 @@ function App() {
           sx={{ display: { xs: "none", md: "block" } }}
         >
           <Box className="ufc-skeleton-box">
-            Elemento: Gráfico de Distribución (Métodos de Victoria)
+            Gráfico de Distribución (Métodos de Victoria)
           </Box>
         </Grid>
 
@@ -48,7 +48,7 @@ function App() {
           sx={{ display: { xs: "none", md: "block" } }}
         >
           <Box className="ufc-skeleton-box">
-            Elemento: Tabla de Historial de Combates Recientes
+            Tabla de Historial de Combates Recientes
           </Box>
         </Grid>
 
@@ -56,7 +56,7 @@ function App() {
         <Grid size={{ xs: 12, md: 12 }}>
           <Paper className="ufc-info-paper" sx={{ boxShadow: 2 }}>
             <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold', color: '#d32f2f' }}>
-              Elemento: Información Adicional
+              Información Adicional
             </Typography>
             <Typography variant="body2" sx={{ color: '#ccc' }}>
               Glosario estadístico y detalles sobre las métricas físicas y de desempeño de los peleadores de UFC.

@@ -14,7 +14,7 @@ export default function HeaderUI() {
         variant="subtitle1" 
         className="ufc-header-subtitle"
       >
-        Estructura Inicial - Análisis de Luchadores, Combates y Rendimiento
+        Análisis de Luchadores, Combates y Rendimiento
       </Typography>
     </Box>
   );
