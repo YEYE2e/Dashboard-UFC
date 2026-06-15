@@ -26,3 +26,10 @@ dist-ssr
 # Media (large datasets)
 Media/
 
+# Firebase credentials
+firebase-key.json
+.env
+.env.local
+firebase-config.env
+
+

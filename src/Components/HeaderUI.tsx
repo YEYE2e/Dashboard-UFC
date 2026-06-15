@@ -2,19 +2,25 @@ import { Box, Typography } from '@mui/material';
 
 export default function HeaderUI() {
   return (
-    <Box className="ufc-header-container">
+    <Box sx={{ py: 1, textAlign: 'center' }}>
       <Typography
         variant="h3"
         component="h1"
-        className="ufc-header-title"
+        sx={{
+          fontWeight: 900,
+          textTransform: 'uppercase',
+          letterSpacing: '2px',
+          color: '#ffffff'
+        }}
       >
-        UFC <span className="ufc-header-title-red">Stats</span> Dashboard
+        UFC <span style={{ color: '#d32f2f' }}>Stats</span> Dashboard
       </Typography>
       <Typography 
         variant="subtitle1" 
-        className="ufc-header-subtitle"
+        color="text.secondary"
+        sx={{ mt: 1, letterSpacing: '0.5px' }}
       >
-        Análisis de Luchadores, Combates y Rendimiento
+        Análisis Histórico de Combates, Peleadores y Rendimiento
       </Typography>
     </Box>
   );

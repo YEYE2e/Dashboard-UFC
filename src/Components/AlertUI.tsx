@@ -8,8 +8,8 @@ export default function AlertUI(config: AlertConfig) {
   return (
     <Alert 
       variant="outlined" 
-      severity="error"
-      className="ufc-alert-custom"
+      severity="info"
+      sx={{ width: '100%' }}
     >
       {config.description}
     </Alert>
